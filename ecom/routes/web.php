@@ -13,26 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'indexcontroller@store');
 
-Route::get('/about', function () {
-    return view('pages/about');
-});
+Route::get('/about', 'indexcontroller@isoka'); 
 
-Route::get('/testimonial', function () {
-    return view('pages/testimonial');
-});
+Route::get('/testimonial', 'indexcontroller@gon');
 
-Route::get('/product', function () {
-    return view('pages/product');
-});
+Route::get('/product', 'indexcontroller@aomine');
 
-Route::get('/contact', function () {
-    return view('pages/contact');
-});
+Route::get('/contact', 'indexcontroller@giraya');
 
-Route::get('/blog_list', function () {
-    return view('pages/blog_list');
-});
+Route::get('/blog_list', 'indexcontroller@boubou');
